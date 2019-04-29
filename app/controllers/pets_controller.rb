@@ -6,6 +6,7 @@ class PetsController < ApplicationController
   end
 
   get '/pets/new' do
+      @owners = Owner.all
     erb :'/pets/new'
   end
 
@@ -15,7 +16,6 @@ class PetsController < ApplicationController
     if !params["owner"]["name"].empty?
       @pet.owner = Owner.create(name: params["owner"]["name"])
     end
-    @owners = Owner.all
     erb :"pets/show"
   end
 
