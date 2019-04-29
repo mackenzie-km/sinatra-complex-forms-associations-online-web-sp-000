@@ -15,6 +15,7 @@ class PetsController < ApplicationController
     if !params["owner"]["name"].empty?
       @pet.owner = Owner.create(name: params["owner"]["name"])
     end
+    puts params
     @owners = Owner.all
     erb :"pets/#{@pet.id}"
   end
