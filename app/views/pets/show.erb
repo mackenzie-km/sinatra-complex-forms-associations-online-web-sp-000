@@ -1,2 +1,2 @@
-<h1><%=Pet.find_by(:id).name%></h1>
-<h4>Owner: <%=Pet.find(:id).owner.name%></h4>
+<h1><%=Pet.find_by(id: params[:id]).name%></h1>
+<h4>Owner: <%=Pet.find(id: params[:id]).owner.name%></h4>
