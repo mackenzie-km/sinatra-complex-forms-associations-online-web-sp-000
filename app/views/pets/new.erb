@@ -8,8 +8,8 @@
 
   <br>
   Choose an existing owner:<br>
-  <%Owner.all.each do |owner|%>
-    <input type="checkbox" name="owner[owner_id][]" value="<%=owner.id%>" id="<%=owner.id%>"><%=owner.name%></input>
+  <%Owners.all.each do |pet|%>
+    <input type="checkbox" name="pet[owner_id][]" value="<%=owner.id%>" id="<%=owner.id%>"><%=owner.name%></input>
   <%end%>
   <br><br>
   and/or, create a new owner:
